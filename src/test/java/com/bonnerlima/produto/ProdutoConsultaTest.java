@@ -15,7 +15,7 @@ public class ProdutoConsultaTest extends ManagerTest {
         Assert.assertNotNull(produto);
     }
 
-        @Test
+    @Test
     public void buscaProdutoPorReferencia() {
         Produto produto = entityManager.find(Produto.class, 1);
 
