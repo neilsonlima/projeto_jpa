@@ -9,7 +9,7 @@ import com.bonnerlima.model.Produto;
 public class ProdutoAtualizacaoGerenciadaTest extends ManagerTest {
 
     @Test
-    public void insertProdutoTransaction() {
+    public void atualizacaoGerenciadaProdutoTransaction() {
         Produto p = entityManager.find(Produto.class, 1);
 
         entityManager.getTransaction().begin();

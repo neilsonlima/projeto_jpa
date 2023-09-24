@@ -11,7 +11,7 @@ import com.bonnerlima.model.Produto;
 public class ProdutoAtualizacaoTest extends ManagerTest {
 
     @Test
-    public void insertProdutoTransaction() {
+    public void atualizaProdutoTransaction() {
         Produto p = new Produto();
         p.setId(1);
         p.setNome("Novo Kindle");
