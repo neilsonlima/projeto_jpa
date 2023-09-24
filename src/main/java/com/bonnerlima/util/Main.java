@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println("===================================================================");
         System.out.println(produto);
-        System.out.println(produto.isAtivo());
+        System.out.println(produto.getAtivo());
         System.out.println("===================================================================");
 
         entityManager.close();
