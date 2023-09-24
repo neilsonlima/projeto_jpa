@@ -15,7 +15,6 @@ public class ProdutoAtualizacaoTest extends ManagerTest {
         Produto p = new Produto();
         p.setId(1);
         p.setNome("Novo Kindle");
-        p.setAtivo(true);
         p.setDescricao("A proveite o novo kindle");
         p.setPreco(new BigDecimal(799));
 

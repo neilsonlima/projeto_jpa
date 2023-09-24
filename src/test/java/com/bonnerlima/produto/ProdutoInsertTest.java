@@ -15,7 +15,6 @@ public class ProdutoInsertTest extends ManagerTest {
         Produto p = new Produto();
         p.setId(2);
         p.setNome("Macbook");
-        p.setAtivo(true);
         p.setDescricao("Macbook pro retina");
         p.setPreco(new BigDecimal(23000));
 
