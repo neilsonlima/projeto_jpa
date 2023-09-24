@@ -1,33 +1,31 @@
 package com.bonnerlima.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.bonnerlima.model.enuns.Sexo;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@ToString(exclude = "id")
 @Entity
-@Table(name = "produtos")
-public class Produto implements Serializable {
-
+@Table(name = "clientes")
+public class Cliente implements Serializable {
     @Id
     @EqualsAndHashCode.Include
     private Integer id;
 
     private String nome;
 
-    private String descricao;
-
-    private BigDecimal preco;
-
+    @Enumerated(EnumType.STRING)
+    private Sexo sexo;
 }
