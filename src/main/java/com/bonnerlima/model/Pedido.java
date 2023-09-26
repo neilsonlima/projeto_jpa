@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -40,4 +41,7 @@ public class Pedido implements Serializable {
 
     @Enumerated(EnumType.STRING)
     private StatusPedido status;
+
+    @Embedded
+    private PedidoEnderecoEntrega enderecoEntrega;
 }
