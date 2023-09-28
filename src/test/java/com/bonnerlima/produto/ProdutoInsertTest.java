@@ -13,7 +13,6 @@ public class ProdutoInsertTest extends ManagerTest {
     @Test
     public void insertProdutoTransaction() {
         Produto p = new Produto();
-        p.setId(2);
         p.setNome("Macbook");
         p.setDescricao("Macbook pro retina");
         p.setPreco(new BigDecimal(23000));
@@ -24,7 +23,7 @@ public class ProdutoInsertTest extends ManagerTest {
 
         entityManager.clear();
 
-        Produto produto = entityManager.find(Produto.class, 2);
+        Produto produto = entityManager.find(Produto.class, p.getId());
 
         Assert.assertNotNull(produto);
 

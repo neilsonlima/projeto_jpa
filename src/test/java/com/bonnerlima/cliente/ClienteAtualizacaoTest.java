@@ -22,7 +22,7 @@ public class ClienteAtualizacaoTest extends ManagerTest {
 
         entityManager.clear();
 
-        Cliente ClienteAtualizado = entityManager.find(Cliente.class, 1);
+        Cliente ClienteAtualizado = entityManager.find(Cliente.class, cliente.getId());
 
         Assert.assertEquals("Amigo AA", ClienteAtualizado.getNome());
 

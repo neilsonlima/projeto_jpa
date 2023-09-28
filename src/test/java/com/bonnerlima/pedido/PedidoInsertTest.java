@@ -26,7 +26,6 @@ public class PedidoInsertTest extends ManagerTest {
         end.setEstado("MG");
 
         Pedido pedido = new Pedido();
-        pedido.setId(1);
         pedido.setDataPedido(LocalDateTime.now());
         pedido.setStatus(StatusPedido.AGUARDANDO);
         pedido.setTotal(new BigDecimal(23));
@@ -38,7 +37,7 @@ public class PedidoInsertTest extends ManagerTest {
 
         entityManager.clear();
 
-        Pedido pedidoCriado = entityManager.find(Pedido.class, 1);
+        Pedido pedidoCriado = entityManager.find(Pedido.class, pedido.getId());
 
         Assert.assertNotNull(pedidoCriado);
 

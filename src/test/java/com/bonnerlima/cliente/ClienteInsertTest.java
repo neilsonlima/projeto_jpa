@@ -12,7 +12,6 @@ public class ClienteInsertTest extends ManagerTest {
     @Test
     public void insertClienteTransaction() {
         Cliente cliente = new Cliente();
-        cliente.setId(3);
         cliente.setNome("Amigo C");
         cliente.setSexo(Sexo.MASCULINO);
 

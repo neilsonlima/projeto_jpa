@@ -16,7 +16,7 @@ public class ProdutoRemoveTest extends ManagerTest {
         entityManager.remove(p);
         entityManager.getTransaction().commit();
 
-        Produto checkProduto = entityManager.find(Produto.class, 3);
+        Produto checkProduto = entityManager.find(Produto.class, p.getId());
 
         Assert.assertNull(checkProduto);
     }

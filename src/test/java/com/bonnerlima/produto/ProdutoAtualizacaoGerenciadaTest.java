@@ -18,7 +18,7 @@ public class ProdutoAtualizacaoGerenciadaTest extends ManagerTest {
 
         entityManager.clear();
 
-        Produto produtoAtualizado = entityManager.find(Produto.class, 1);
+        Produto produtoAtualizado = entityManager.find(Produto.class, p.getId());
 
         Assert.assertEquals("Atualizacao Gerenciada - Kindle", produtoAtualizado.getNome());
 
